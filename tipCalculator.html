@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+        <link rel="stylesheet" href="tipCalculator.css">
+        <script src="tipCalculator.js"></script>
+    </head>
+    <body>
+        
+        <div id="outer-div">
+            <div>
+                <h1>Tip Calculator</h1>
+            </div>
+
+            <table id="result-table">
+                    
+                <tr>
+                    <td id="text-input">Enter Bill Amount : </td>
+                    <td style="width: 10px;">$</td>
+                    <td id="text-box"><input type="text" style="width: 100%;" id="text-input-id"></td>
+                </tr>
+            </table>
+
+            <p>Tip Percentage : <button id="buttton-value" disabled>50</button></p>
+
+            <div>
+                <table id="range-table">
+                    <tr>
+                        <td id="small-td" style="text-align: right;">1</td>
+                        <td>
+                            <input type="range" min="1" max="100" value="50" id="slider" oninput="percentFunc()">
+                        </td>
+                        <td id="small-td">100</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div>
+                <button id="buttton-value" onclick="calculate()">Calculate Tip</button>
+            </div>
+            
+
+            <div>
+                <table id="result-table">
+                    <tr>
+                        <td id="result">Tip</td>
+                        <td style="width: 10px;">:</td>
+                        <td id="tip"></td>
+                    </tr>
+                    
+                </table>
+                
+                <table id="result-table">
+                    
+                    <tr>
+                        <td id="result">Total Bill :</td>
+                        <td style="width: 10px;">:</td>
+                        <td id="total"></td>
+                    </tr>
+                </table>
+            </div>
+            
+        </div>
+
+    </body>
+</html>

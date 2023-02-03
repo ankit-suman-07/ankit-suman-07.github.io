@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+        <link rel="stylesheet" href="calculator.css">
+        <script src="calculator.js"></script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td colspan="4" id="top">CALCULATOR</td>
+            </tr>
+            <tr>
+                <td colspan="4" id="text-area">
+                </td>
+            </tr>
+            <tr>
+                <td><button onclick="clearAll()" id="button-1">C</button></td>
+                <td><button value="%" onclick="addToLast(value)" id="button-1">%</button></td>
+                <td><button value="/" onclick="addToLast(value)" id="button-1">/</button></td>
+                <td><button value="*" onclick="addToLast(value)" id="button-1">x</button></td>
+            </tr>
+            <tr>
+                <td><button value="7" onclick="addToLast(value)">7</button></td>
+                <td><button value="8" onclick="addToLast(value)">8</button></td>
+                <td><button value="9" onclick="addToLast(value)">9</button></td>
+                <td><button value="+" onclick="addToLast(value)" id="button-2">+</button></td>
+            </tr>
+            <tr>
+                <td><button value="4" onclick="addToLast(value)">4</button></td>
+                <td><button value="5" onclick="addToLast(value)">5</button></td>
+                <td><button value="6" onclick="addToLast(value)">6</button></td>
+                <td><button value="-" onclick="addToLast(value)" id="button-2">-</button></td>
+            </tr>
+            <tr>
+                <td><button value="1" onclick="addToLast(value)">1</button></td>
+                <td><button value="2" onclick="addToLast(value)">2</button></td>
+                <td><button value="3" onclick="addToLast(value)">3</button></td>
+                <td rowspan="2"><button onclick="calculate()" id="button-2">=</button></td>
+            </tr>
+            <tr>
+                <td><button  value="."  id="button-3" onclick="addToLast(value)">.</button></td>
+                <td><button value="0" onclick="addToLast(value)">0</button></td>
+                <td><button  onclick="delLastVal()" id="button-3">del</button></td>
+            </tr>
+        </table>
+    </body>
+        
+</html>
