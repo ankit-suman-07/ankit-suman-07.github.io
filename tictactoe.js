@@ -175,9 +175,9 @@ function disableButtons()
 
 function change_3_tiles(a, b, c)
 {
-  document.getElementById ("button-" + a).style.backgroundColor = 'cyan';
-  document.getElementById ("button-" + b).style.backgroundColor = 'cyan';
-  document.getElementById ("button-" + c).style.backgroundColor = 'cyan';
+  document.getElementById ("button-" + a).style.backgroundColor = 'red';
+  document.getElementById ("button-" + b).style.backgroundColor = 'red';
+  document.getElementById ("button-" + c).style.backgroundColor = 'red';
 
   // document.getElementById ("button-" + a).style.textDecoration = "line-through";
   // document.getElementById ("button-" + b).style.textDecoration = "line-through";
