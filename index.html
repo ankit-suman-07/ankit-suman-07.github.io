@@ -4,35 +4,244 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main-style.css">
-    <script src="main-script.js"></script>
-    <title>Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    
+    <script src="script.js"></script>
+	<title>Responsive Grid Example</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100vh;
+}
+
+@media (orientation: portrait) {
+    .wrapper {
+        grid-template-rows: 50vh 50vh;
+        grid-template-columns: 100vw;
+    }
+}
+
+.section {
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+ 
+
+
+  /* Control the left side */
+.left {
+    left: 0;
+  }
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+    background-color: #EDF0F2;
+  }
+  
+
+  #table{
+    margin: auto;
+    height: 100%;
+    width: 90%;
+  }
+
+  #profile{
+    width: 30%;
+  max-width: 400px;
+  height: auto;
+  }
+
+  td{
+    align-content: center;
+  }
+
+  #contact{
+    width: 28%;
+    min-width: 100px;
+    min-height: 30px;
+    background-color: #111;
+    border-radius: 2px;
+    color: #ddd;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #social{
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    margin-bottom: 7%;
+    border-radius: 2px;
+    border-color: white;
+    background-color: white;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  #social:hover{
+    cursor: pointer;
+  }
+
+  button:hover{
+    cursor: pointer;
+  }
+
+
+
+  #b{
+    padding-bottom: 10px;
+    font-family: 'Space Mono', monospace;
+  }
+
+  #c{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Space Mono', monospace;
+  }
+
+  #g{
+    padding-bottom: 0px;
+    font-family: 'Space Mono', monospace;
+  }
+
+  #f{
+    height: 10%;
+  }
+
+  #a{
+    padding: 0px;
+  }
+
+  #d{
+    height: 20%;
+  }
+
+  p{
+    margin: auto;
+    min-width: 300px;
+    font-family: 'clear sans resular';
+  }
+
+  #h{
+    height: 20%;
+    font-family: 'Roboto', sans-serif;
+  }
+
+ #i{
+    padding: 25px;
+    margin: 10px;
+ }
+    </style>
+	
 </head>
 <body>
-    <h1>Projects</h1>
-    <div>
-        <a href="calculator.html">1. Calculator</a>
-    </div>
-    
-    <div>
-        <a href="tictactoe.html">2. Tic-Tac-Toe</a>
-    </div>
-    
-    <div>
-        <a href="rockpaperscissor.html">3. Rock Paper Scissor</a>
-    </div>
-    
-    <div>
-        <a href="expenseTracker.html">4. Expense Tracker</a>
-    </div>
-    
-    <div>
-        <a href="tipCalculator.html">5. Tip Calculator</a>
-    </div>
-    
-    <div>
-        <a href="toDoList.html">6. To-Do-List</a>
-    </div>
+	<div class="wrapper">
+		<div class="section left">
+            <table id="table">
+                <tr>
+                    <td colspan="3" id="a">
+                        <img src="profile.png"  alt="Profile image" id="profile">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right; font-size: 2.1em;" id="b">
+                        <
+                    </td>
+                    <td id="b" style="width: 30%;">
+                        <span style="font-size: 1.9em;">ANKIT_SUMAN</span> 
+                    </td>
+                    <td style="text-align: left; font-size: 2.1em;" id="b">
+                        >
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="3" id="c">
+                        Software Engineer (he/him)
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" id="d">
+                        <button id="contact">Contact Me</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" id="e">
+                        <a href="https://www.instagram.com/ankit__suman_/"><img src="instagram.png" id="social" alt=""></a>
+                        <a href=""><img src="twitter.png" id="social" alt=""></a>
+                        <a href="https://github.com/ankit-suman-07"><img src="github.png" id="social" alt=""></a>
+                        <a href="https://www.linkedin.com/in/ankit-suman-6925011b6/"><img src="linkedin.png" id="social" alt=""></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+		<div class="section right">
+            <table id="table">
+                <tr>
+                    <td colspan="3" id="f">
+                        
+
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right; font-size: 1.8em;" id="g">
+                        <
+                    </td>
+                    <td id="g" style="width: 23%;">
+                        <span style="font-size: 1.8em;">/About_Me</span> 
+                    </td>
+                    <td style="text-align: left; font-size: 1.8em;" id="g">
+                        >
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="3" id="h">
+                        <p style="width: 65%; "> A graduate with a degree in Computer Science. I am currently 
+                            seeking a full-time role in front-end development. I 
+                            am eager to join a tech company that builds out-of-the-box 
+                            solutions. I enjoy working on challenging projects that require creative 
+                            solutions and attention to detail. I am a quick learner, 
+                            a good communicator, and a team player. I am open to feedback 
+                            and constantly seek to improve my skills and knowledge.</p> 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" id="i">
+                        <button id="contact">Resume</button>
+                        <a href="portfolio.html"><button id="contact">Projects</button></a>
+                    </td>
+                </tr>
+                <tr>
+                    
+                </tr>
+            </table>
+        </div>
+		
+	</div>
     
 </body>
 </html>
