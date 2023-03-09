@@ -72,7 +72,14 @@
   #profile{
     width: 30%;
   max-width: 400px;
+  transition: all 0.3s linear;
   height: auto;
+  }
+
+  #profile:hover{
+    cursor: pointer;
+    
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
   }
 
   td{
@@ -90,10 +97,10 @@
   }
 
   #social{
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     margin: 5px;
-    margin-bottom: 7%;
+    margin-bottom: 6%;
     border-radius: 2px;
     border-color: white;
     background-color: white;
@@ -103,10 +110,16 @@
 
   #social:hover{
     cursor: pointer;
+    
+  }
+
+  button{
+    transition: all 0.3s linear;
   }
 
   button:hover{
     cursor: pointer;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
   }
 
 
@@ -142,6 +155,7 @@
     margin: auto;
     min-width: 300px;
     font-family: 'clear sans resular';
+    text-align: justify;
   }
 
   #h{
@@ -185,13 +199,13 @@
                 </tr>
                 <tr>
                     <td colspan="3" id="d">
-                        <button id="contact">Contact Me</button>
+                      <a href="mailto: ankitsuman07@gmail.com"><button id="contact">Contact Me</button></a>
                     </td>
                 </tr>
-                <tr>
+                <tr> 
                     <td colspan="3" id="e">
                         <a href="https://www.instagram.com/ankit__suman_/"><img src="instagram.png" id="social" alt=""></a>
-                        <a href=""><img src="twitter.png" id="social" alt=""></a>
+                        <a href="mailto: ankitsuman07@gmail.com"><img src="gmail.png" id="social" alt=""></a>
                         <a href="https://github.com/ankit-suman-07"><img src="github.png" id="social" alt=""></a>
                         <a href="https://www.linkedin.com/in/ankit-suman-6925011b6/"><img src="linkedin.png" id="social" alt=""></a>
                     </td>
@@ -220,18 +234,18 @@
                 </tr>
                 <tr>
                     <td colspan="3" id="h">
-                        <p style="width: 65%; "> A graduate with a degree in Computer Science. I am currently 
-                            seeking a full-time role in front-end development. I 
-                            am eager to join a tech company that builds out-of-the-box 
-                            solutions. I enjoy working on challenging projects that require creative 
-                            solutions and attention to detail. I am a quick learner, 
-                            a good communicator, and a team player. I am open to feedback 
-                            and constantly seek to improve my skills and knowledge.</p> 
+                        <p style="width: 65%; "> A graduate with a degree in  Computer Science. I am currently 
+                                                 seeking a full-time role in front-end development. I am eager 
+                                                 to join a tech company that builds  out-of-the-box  solutions. 
+                                                 I enjoy working on challenging projects that require creative 
+                                                 solutions and  attention to detail.  I am a quick learner,  a 
+                                                 good communicator,  and a team player.  I am open to feedback 
+                                                    and constantly seek to improve my skills and knowledge.</p> 
                     </td>
                 </tr>
                 <tr>
                     <td colspan="3" id="i">
-                        <button id="contact">Resume</button>
+                      <a href="Resume.pdf"><button id="contact">Resume</button></a>
                         <a href="portfolio.html"><button id="contact">Projects</button></a>
                     </td>
                 </tr>
