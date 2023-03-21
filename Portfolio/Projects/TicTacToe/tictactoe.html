@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Tic-Tac-Toe</title>
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="tictactoe.css">
+    <script src="tictactoe.js"></script>
+  </head>
+  <body>
+    
+    <div id="title">
+      TIC-TAC-TOE
+    </div>
+    <table>
+      <tr>
+        <td><button id="button-0" onclick="checkWinner(0, id)"></button></td>
+        <td><button id="button-1" onclick="checkWinner(1, id)"></button></td>
+        <td><button id="button-2" onclick="checkWinner(2, id)"></button></td>
+      </tr>
+      <tr>
+        <td><button id="button-3" onclick="checkWinner(3, id)"></button></td>
+        <td><button id="button-4" onclick="checkWinner(4, id)"></button></td>
+        <td><button id="button-5" onclick="checkWinner(5, id)"></button></td>
+      </tr>
+      <tr>
+        <td><button id="button-6" onclick="checkWinner(6, id)"></button></td>
+        <td><button id="button-7" onclick="checkWinner(7, id)"></button></td>
+        <td><button id="button-8" onclick="checkWinner(8, id)"></button></td>
+      </tr>
+    </table>
+    <div id="player">
+      <p>
+        Player 1 : O
+      </p>
+      <p>
+        Player 2 : X
+      </p>
+    </div>
+    <div id="result-div">
+      <p id="result"></p>
+    </div>
+  </body>
+</html>

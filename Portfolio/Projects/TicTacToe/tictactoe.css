@@ -1,0 +1,73 @@
+body{
+  padding: 20px;
+  font-family: 'Josefin Sans';
+}
+
+table{
+  margin: auto;
+  
+  margin-top: 50px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+button{
+  border: 0px;
+  font-family: 'Josefin Sans';
+  font-size: 60px;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  
+}
+
+button:hover{
+  border: 0px;
+}
+
+button:disabled{
+  color: black;
+}
+
+#button-0{
+  border-top-left-radius: 20px;
+}
+
+#button-2{
+  border-top-right-radius: 20px;
+}
+
+#button-6{
+  border-bottom-left-radius: 20px;
+}
+
+#button-8{
+  border-bottom-right-radius: 20px;
+}
+
+div{
+  width: 300px;
+  margin: auto;
+}
+
+#title{
+  text-align: center;
+  margin: auto;
+  font-size: 40px; 
+}
+
+#player{
+  text-align: center;
+  margin: auto;
+  font-size: 20px;
+}
+
+#result-div{
+  text-align: center;
+  margin: auto;
+  font-size: 30px;
+  padding: 10px;
+  border: 0px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}

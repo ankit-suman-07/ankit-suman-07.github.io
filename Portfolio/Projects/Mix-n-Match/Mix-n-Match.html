@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <style>
+        table{
+    margin-top: 0px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#top{
+    height: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Space Mono', monospace;
+}
+
+#banner{
+    font-size: xx-large;
+}
+
+#moves {
+    text-align: right;
+}
+
+#banner {
+    text-align: center;
+    color: coral;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+td{
+    padding: 10px;
+    
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img:hover{
+    cursor: pointer;
+}
+
+button{
+    width: 100px;
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
+    border-color: white;
+    background-color: white;
+}
+
+
+
+    </style>
+    
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr id="top">
+            <td id="timer">Time : 0</td>
+            <td id="banner" colspan="3">Mix-n-Match</td>
+            <td id="moves">Moves : 0</td>
+        </tr>
+        <tr>
+            <td><img src="./Assets/question-mark.png" id="0" onclick="changeCardInitiate(id)"></td>
+            <td><img src="./Assets/question-mark.png" id="1" onclick="changeCardInitiate(id)"></td>
+            <td><img src="./Assets/question-mark.png" id="2" onclick="changeCardInitiate(id)"></td>
+            <td><img src="./Assets/question-mark.png" id="3" onclick="changeCardInitiate(id)"></td>
+            <td><img src="./Assets/question-mark.png" id="4" onclick="changeCardInitiate(id)"></td>
+        </tr>
+        <tr>
+            <td><img src="./Assets/question-mark.png" id="5" onclick="changeCardInitiate(id)"></td>
+            <td><img src="./Assets/question-mark.png" id="6" onclick="changeCardInitiate(id)"></td>
+            <td><img src="./Assets/question-mark.png" id="7" onclick="changeCardInitiate(id)"></td>
+            <td><img src="./Assets/question-mark.png" id="8" onclick="changeCardInitiate(id)"></td>
+            <td><img src="./Assets/question-mark.png" id="9" onclick="changeCardInitiate(id)"></td>
+        </tr>
+        <tr>
+            <td><img src="./Assets/question-mark.png" id="10" onclick="changeCardInitiate(id)"></td>
+            <td><img src="./Assets/question-mark.png" id="11" onclick="changeCardInitiate(id)"></td>
+            <td><button id="start" onclick="startTimer()"><img src="./Assets/start-button.png" id="startImg"></button></td>
+            <td><img src="./Assets/question-mark.png" id="12" onclick="changeCardInitiate(id)"></td>
+            <td><img src="./Assets/question-mark.png" id="13" onclick="changeCardInitiate(id)"></td>
+        </tr>
+        <tr>
+            <td><img src="./Assets/question-mark.png" id="14" onclick="changeCardInitiate(id)"></td>
+            <td><img src="./Assets/question-mark.png" id="15" onclick="changeCardInitiate(id)"></td>
+            <td><img src="./Assets/question-mark.png" id="16" onclick="changeCardInitiate(id)"></td>
+            <td><img src="./Assets/question-mark.png" id="17" onclick="changeCardInitiate(id)"></td>
+            <td><img src="./Assets/question-mark.png" id="18" onclick="changeCardInitiate(id)"></td>
+        </tr>
+        <tr>
+            <td><img src="./Assets/question-mark.png" id="19" onclick="changeCardInitiate(id)"></td>
+            <td><img src="./Assets/question-mark.png" id="20" onclick="changeCardInitiate(id)"></td>
+            <td><img src="./Assets/question-mark.png" id="21" onclick="changeCardInitiate(id)"></td>
+            <td><img src="./Assets/question-mark.png" id="22" onclick="changeCardInitiate(id)"></td>
+            <td><img src="./Assets/question-mark.png" id="23" onclick="changeCardInitiate(id)"></td>
+        </tr>
+        
+    </table>
+    <script>
+        
+        
+var imageUrl = ["artificial-intelligence.png", "cd-player.png", "firefox.png", "github.png", "java.png", "joystick.png", 
+                  "keyboard.png", "mouse.png", "processor.png", "python.png", "robot.png", "rocket.png", "artificial-intelligence.png", 
+                  "cd-player.png", "firefox.png", "github.png", "java.png", "joystick.png", "keyboard.png", "mouse.png", "processor.png", 
+                  "python.png", "robot.png", "rocket.png"];
+var cardMatched = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
+
+function shuffleArray(array) { 
+  return array.sort( ()=>Math.random()-0.5 );
+} 
+
+var matchCount = 0;
+var timer;
+var start = 0;
+
+function youWin(){
+  for(var i =0; i<=24; i++){
+    document.getElementById('' + i).src = "./Assets/success.png";
+  }
+  document.getElementById("startImg").src = "./Assets/winner.png";
+  stopTimer();
+}
+
+function youLost(){
+  for(var i =0; i<=24; i++){
+    document.getElementById('' + i).src = "./Assets/loser.png";
+    cardMatched[i] = 0;
+  }
+  document.getElementById("startImg").src = "./Assets/game-over.png";
+  stopTimer();
+}
+      
+    function startTimer() {
+      document.getElementById('start').setAttribute('disabled', 'true');
+      start = 1;
+      
+      var time = 0;
+      shuffleArray(imageUrl);
+      
+        timer = setInterval(function() { 
+          time += 1;
+            document.getElementById('timer')
+                    .innerHTML = "Time : " + time; 
+                    
+                      if(matchCount < 12 && time >= 100)
+                      {
+                        document.getElementById('timer').innerHTML = "You Lost!!!";
+                        youLost();
+                        
+                      }
+                      else if(matchCount >= 12)
+                      {
+                        document.getElementById('timer').innerHTML = "You Win!!!";
+                        youWin();
+                      }
+                    
+        }, 1000);
+    }
+      
+    function stopTimer() {
+        
+        clearInterval(timer); 
+    }
+
+    function changeCard(id){
+      if (start == 1)
+        document.getElementById(id).src = "./Assets/" + imageUrl[parseInt(id)];
+    }
+
+    function tempchangeCard(id){
+      if (start == 1)
+      {
+        setTimeout(() => {
+          document.getElementById(id).src = "./Assets/" + imageUrl[parseInt(id)];
+        }, 1000); // Delay execution for 1 second (1000 milliseconds)
+      }
+      
+    }
+
+    var first = -1;
+    var second = -1;
+    var moves = 0;
+
+    function changeCardInitiate(id){
+      if(start != 1)
+      return;
+      if(cardMatched[parseInt(id)] == -1)
+      {
+        if (start == 1){
+          moves += 1;
+          document.getElementById('moves').innerHTML = "Moves : " + moves; 
+        }
+        
+        if(first == -1)
+        {
+          first = id;
+          changeCard(id);
+        }
+        else
+        {
+          second = id;
+          changeCard(id);
+          if(imageUrl[parseInt(first)] == imageUrl[parseInt(second)])
+          {
+            cardMatched[parseInt(first)] = 0;
+            cardMatched[parseInt(second)] = 0;
+            matchCount += 1;
+            first = -1;
+            second = -1;
+          }
+            
+          else
+          {
+            setTimeout(() => {
+              document.getElementById(first).src = "./Assets/question-mark.png";
+            document.getElementById(second).src = "./Assets/question-mark.png";
+            
+            console.log(cardMatched);
+            first = -1;
+            second = -1;
+            }, 1000); // Delay execution for 1 second (1000 milliseconds)
+            
+          }
+        }
+      }
+    }
+            </script>
+</body>
+</html>

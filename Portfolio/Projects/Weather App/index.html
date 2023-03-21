@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <table>
+        <tr>
+            <td colspan="2"><input type="text" name="City" id="cityName" placeholder="Enter City"></td>
+            <td colspan="2"><button onclick="weather()">Weather</button></td>
+        </tr>
+        <tr>
+            <td id="label">Temperature :</td>
+            <td id="inner"><span id="temp">00</span></td>
+            <td id="symbol">&#176;C</td>
+            <td id="disp"><img src="Assets/weather.png" alt="weather" id="temp_img"></td>
+        </tr>
+        <tr>
+            <td id="label">Max Temperature :</td>
+            <td id="inner"><span id="max">00</span></td>
+            <td id="symbol">&#176;C</td>
+            <td id="disp"><img src="Assets/weather.png" alt="weather" id="max_img"></td>
+        </tr>
+        <tr>
+            <td id="label">Min Temperature :</td>
+            <td id="inner"><span id="min">00</span></td>
+            <td id="symbol">&#176;C</td>
+            <td id="disp"><img src="Assets/weather.png" alt="weather" id="min_img"></td>
+        </tr>
+        <tr>
+            <td id="label">Feels Like :</td>
+            <td id="inner"><span id="feels">00</span></td>
+            <td id="symbol">&#176;C</td>
+            <td id="disp"><img src="Assets/weather.png" alt="weather" id="feel_img"></td>
+        </tr>
+        <tr>
+            <td id="label">Cloud Coverage :</td>
+            <td id="inner"><span id="cloud">00</span></td>
+            <td id="symbol">&#37;</td>
+            <td id="disp"><img src="Assets/weather.png" alt="weather" id="cloud_img"></td>
+        </tr>
+        <tr>
+            <td  id="label">Wind Speed :</td>
+            <td id="inner"><span id="speed">00</span></td>
+            <td id="symbol">kmph</td>
+            <td id="disp"><img src="Assets/weather.png" alt="weather" id="wind_img"></td>
+        </tr>
+        <tr>
+            <td id="label">Humidity :</td>
+            <td id="inner"><span id="humidity">00</span></td>
+            <td id="symbol">&#37;</td>
+            <td id="disp"><img src="Assets/weather.png" alt="weather" id="humid_img"></td>
+        </tr>
+        
+    </table>
+	
+	<script src="script.js"></script>
+</body>
+</html>
