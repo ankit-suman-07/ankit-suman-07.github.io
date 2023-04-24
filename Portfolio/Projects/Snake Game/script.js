@@ -30,13 +30,16 @@ function main(currentTime) {
         // User clicked the "Yes" button
         // Hide the modal
         modal.style.display = 'none';
-        window.location = '/';
+        // Reload the current webpage
+        location.reload();
+
         
       }
       
       confirmNoButton.onclick = function() {
         // User clicked the "No" button or the close button
         modal.style.display = 'none';
+          window.location = '/';
       }
 
     window.requestAnimationFrame(main);
