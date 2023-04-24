@@ -1,0 +1,80 @@
+body{
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: black;
+}
+
+#game-board{
+    border: 2px whitesmoke solid;
+    background-color: black;
+    width: 100vmin;
+    height: 100vmin;
+    display: grid;
+    grid-template-rows: repeat(21, 1fr);
+    grid-template-columns: repeat(21, 1fr);
+    overflow: none;
+}
+
+.snake{
+    background-color: #00917c;
+    border: .10vmin solid black;
+    border-radius: 0.5vmin;
+}
+
+.food{
+    /* background-color: cyan; */
+    /* border: .25vmin solid black; */
+    border-radius:10vmin;
+    
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+  }
+  
+  /* Modal content styles */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    text-align: center;
+    opacity: 0.9;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+  }
+  
+  /* Button styles */
+  .button {
+    background-color: #e73c35; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    opacity: 0.8;
+  }
