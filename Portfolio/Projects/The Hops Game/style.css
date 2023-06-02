@@ -1,0 +1,117 @@
+body{
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: black;
+}
+
+#game-board{
+    border: 1px whitesmoke solid;
+    width: 97vmin;
+    height: 97vmin;
+    display: grid;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: repeat(20, 1fr);
+    overflow: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.grid-item {
+    /* border: 1px solid white; */
+    width: calc(97vmin / 20);
+    height: calc(97vmin / 20);
+    background-color: #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* padding: 10px; */
+    
+}
+
+.grid-inner {
+    /* border: 1px solid white; */
+    width: calc(97vmin / 20);
+    height: calc(97vmin / 20);
+    
+    background-color: #ccc;
+    /* padding: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('Assets/brick.png'); */
+}
+
+.game-top {
+    font-family: 'Quicksand', sans-serif;
+    width: 90%;
+    height: calc(97vmin / 20);
+    /* border: 2px solid white; */
+    position: fixed;
+    top: 0px;
+    background-color: brown;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+#game-name {
+    font-size: 1.4em;
+}
+
+ .left-controls {
+    margin-left: 30px;
+    width: calc(97vmin / 5);
+    height: calc(97vmin / 5);
+    /* border: 1px solid red; */
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    display: none;
+ } 
+
+ .right-controls {
+    margin-right: 30px;
+    width: calc(97vmin / 5);
+    height: calc(97vmin / 5);
+    /* border: 1px solid red; */
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    display: none;
+ } 
+
+ button {
+    width: 100%;
+    height: calc(97vmin / 10);
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    /* border: none; */
+    border: 3px solid #222222;
+    border-radius: 3px;
+    
+ }
+
+button img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@media (max-width: 850px) {
+    .right-controls {
+        display: block;
+    }
+
+    .left-controls {
+        display: block;
+    }
+}
