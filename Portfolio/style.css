@@ -4,11 +4,12 @@ body {
     font-family: 'Rubik', sans-serif;
     margin: 0px;
     padding: 0px;
+    overflow: scroll;
 }
 
-.page-container {
+/* .page-container {
     margin-bottom: 70px;
-}
+} */
 
 
 
@@ -25,6 +26,8 @@ nav {
     
 }
 
+
+
 .nav .logo img {
     width: 58px;
     height: 56px;
@@ -33,17 +36,17 @@ nav {
     background-color: whitesmoke;
 }
 
-nav .logo .title {
+/* nav .logo .title {
     color: white;
     font-size: 24px;
     font-weight: bold;
     padding-left: 24px;
-}
+} */
 
 nav ul {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: flex-start;
     list-style: none;
 }
@@ -120,8 +123,8 @@ nav ul li a {
 
   .name {
     color: #444444;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 0.8rempx;
+    font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,7 +136,17 @@ nav ul li a {
     color: #222222;
   }
 
-
+footer {
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-size: 0.8rem;
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
   
   /* .grid-item:nth-child(1) { background-color: #D74C4F; }
